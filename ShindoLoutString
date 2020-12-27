@@ -1,0 +1,86 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(85, 170, 127)
+Frame.Position = UDim2.new(0.31997031, 0, 0.288433403, 0)
+Frame.Size = UDim2.new(0, 485, 0, 288)
+
+UICorner.CornerRadius = UDim.new(0.100000001, 0)
+UICorner.Parent = Frame
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(94, 190, 141)
+TextButton.Position = UDim2.new(0.292783499, 0, 0.784722209, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "Continue"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner_2.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_2.Parent = TextButton
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(93, 188, 139)
+TextBox.Position = UDim2.new(0.292783499, 0, 0.555555582, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 50)
+TextBox.Font = Enum.Font.SourceSansBold
+TextBox.Text = "Key Here!"
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0.0799999982, 0)
+UICorner_3.Parent = TextBox
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(91, 184, 136)
+TextLabel.Position = UDim2.new(0.18752785, 0, 0.0445389748, 0)
+TextLabel.Size = UDim2.new(0, 303, 0, 94)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Shindo HUB"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_4.Parent = TextLabel
+
+-- Scripts:
+
+local function WWISI_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local TextBox1 = script.Parent.TextBox
+	local Players = game.Players.LocalPlayer
+	local Button1 = script.Parent.TextButton
+	
+	Button1.MouseButton1Down:Connect(function()
+		if TextBox1.Text == "ApqbtDjimaRmgaIasdEmsNsdhLsdaGasdBserTadQ" then
+			Players:Kick("You Have Been Kicked For Being LGBTQ+ Gay!")
+		end
+	end)
+end
+coroutine.wrap(WWISI_fake_script)()
